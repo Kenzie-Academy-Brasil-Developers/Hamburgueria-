@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;500;600&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --Color-primary: #27AE60
+    --Color-primary-50:#93D7AF
+    --Color-secondary: #EB5757
+    --grey-100: #333333
+    --grey-50: #828282
+    --grey-20: #E0E0E0
+    --grey-0: #F5F5F5
+    --Negative: #E60000
+    --Warning: #FFCD07
+    --Sucess: #168821
+    --Information: #155BCB
+
+}
+body{
+   
+    font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Nunito', sans-serif;;
+}
+li {
+    background-color: var(--grey-0);
+  }
+  
+
+.Heading1{
+    font: bold;
+    font-size: 446px;
+    
+}
+
+.Heading2{
+    font: bold;
+    font-size: 22px;
+    color: #ffff;
+    
+}
+
+.Heading3{
+    font: bold;
+    font-size: 18px;
+    color: #27AE60;
+    
+}
+
+.Heading4{
+    font: bold;
+    font-size: 14px;
+    
+}
+
+.Headline{
+    font-size: 16px;
+}
+
+.Body{
+    font-size: 14px;
+}
+
+.Body-600{
+    font: medium;
+    font-size: 14px;
+}
+
+.Caption{
+    font-size: 12px;
+}
