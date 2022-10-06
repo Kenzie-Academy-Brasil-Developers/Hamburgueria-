@@ -9,9 +9,8 @@ import "./styles/reset.css";
 import "../src/styles/global.css";
 function App() {
   const [products, setProducts] = useState([]);
-
-  /*   const [filtered, setFiltered] = useState("");
-  console.log(filtered); */
+  const [filtered, setFiltered] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     api
@@ -44,22 +43,37 @@ function App() {
     setCartItems([]);
   }
 
+  useEffect(() => {
+    const filterItems = products.filter(
+      (product) =>
+        product.name.toUpperCase().includes(search.toUpperCase()) ||
+        product.category.toUpperCase().includes(search.toUpperCase())
+    );
+
+    return setFiltered(filterItems);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
+
   return (
     <>
       <header>
-        <Header />
-        {/*   <Search
-          value={filtered}
-          onChange={(event) => setFiltered(event.target.value)}
-        /> */}
+        <Header setSearch={setSearch} search={search} />
       </header>
       <div className="containerApp">
         <section>
-          <ProductsList
-            products={products}
-            cartItems={cartItems}
-            buttonAdd={buttonAdd}
-          />
+          {filtered.length > 0 ? (
+            <ProductsList
+              products={filtered}
+              cartItems={cartItems}
+              buttonAdd={buttonAdd}
+            />
+          ) : (
+            <ProductsList
+              products={products}
+              cartItems={cartItems}
+              buttonAdd={buttonAdd}
+            />
+          )}
         </section>
         <aside>
           <Cart

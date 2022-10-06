@@ -1,12 +1,12 @@
 .itensCart {
   display: flex;
   flex-direction: row;
-  min-width: 350px;
+  justify-content: space-around;
   margin-bottom: 15px;
 }
 .figureCart {
-  width: 80px;
-  height: 80px;
+  margin: 0;
+  padding: 20px;
 }
 .figureCart > img {
   width: 80px;
@@ -25,4 +25,20 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .descricaoCart {
+    margin-right: 30px;
+  }
+  .figureCart > img {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  h2 {
+    font-size: 24px;
+  }
 }

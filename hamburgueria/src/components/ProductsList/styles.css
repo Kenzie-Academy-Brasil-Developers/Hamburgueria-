@@ -15,7 +15,7 @@ ul {
     gap: 40px;
     margin: 0;
     margin-top: 150px;
-    background-color: red;
+
     overflow-x: scroll;
   }
 }
